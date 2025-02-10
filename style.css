@@ -1,0 +1,279 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: url('banckground.jpg.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 20px;
+}
+
+:root {
+    --bg-color: #F3F6F9;
+    --text-color: #333;
+    --card-bg: #FFFFFF;
+    --navbar-bg: #212529;
+    --header-bg: linear-gradient(135deg, #2C3E50, #4CA1AF);
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #EAEAEA;
+    --card-bg: #1E1E1E;
+    --navbar-bg: #000;
+    --header-bg: linear-gradient(135deg, #1A1A1A, #2A2A2A);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
+    margin-left: 250px;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--navbar-bg);
+    padding-top: 20px;
+}
+
+.sidebar .navbar-brand {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+    color: white;
+    padding: 15px;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Sections */
+.section {
+    padding: 10px 10px;
+}
+
+/* Home Section */
+.home {
+    background: var(--header-bg);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Resume Button */
+.resume-btn {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #FFD700;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dark-mode .dark-mode-toggle {
+    background: #222;
+    color: #FFD700;
+}
+
+/* Social Media Links */
+.social-links a {
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.social-links img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--navbar-bg);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Remove List Dots */
+.cert-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cert-list li {
+    margin: 5px 0;
+}
+
+/* about section */
+.about-card {
+    background: var(--card-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: -50px;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+/* education section */
+.education-card {
+    background: var(--card-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: -50px;
+    text-align: center;
+}
+
+/* project section */
+.project-card {
+    background: var(--card-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: -50px;
+    text-align: center;
+}
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Contact Section */
+.contact-card {
+    background: var(--card-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: -50px;
+    text-align: center;
+}
+
+/* Internships Section */
+.section {
+    padding: 50px 0;
+    margin-top: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Certifications Section */
+.certification-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Specific background images for each certification */
+.certification-card:nth-child(1) { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Red_Hat_logo.svg/512px-Red_Hat_logo.svg.png'); }
+.certification-card:nth-child(2) { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/512px-Oracle_logo.svg.png'); }
+.certification-card:nth-child(3) { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Salesforce.com_logo.svg/512px-Salesforce.com_logo.svg.png'); }
+.certification-card:nth-child(4) { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/JP_Morgan_Chase.svg/512px-JP_Morgan_Chase.svg.png'); }
+.certification-card:nth-child(5) { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png'); }
+.certification-card:nth-child(6) { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Automation_Anywhere_logo.svg/512px-Automation_Anywhere_logo.svg.png'); }
+
+.certification-card h5 {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* skill section */
+.skill-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+
+.card-body {
+    text-align: left;
+}
+
