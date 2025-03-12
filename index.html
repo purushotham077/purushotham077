@@ -8,12 +8,220 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <style>
+        /* Basic styling for mobile */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #343a40;
+            padding-top: 20px;
+            z-index: 100;
+        }
+
+        .sidebar .nav-link {
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .sidebar .nav-link:hover {
+            background-color: #495057;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        .profile-img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .resume-btn {
+            margin-top: 20px;
+        }
+
+        /* Dark Mode Toggle Button */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        /* Adjust container and content on all screens */
+        .container {
+            margin-left: 270px;
+        }
+
+        .home,
+        .section {
+            padding: 20px;
+        }
+
+        .home {
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 1024px) { /* Tablet screens */
+            .container {
+                margin-left: 270px;
+            }
+
+            .sidebar {
+                width: 230px;
+            }
+
+            .profile-img {
+                width: 120px;
+            }
+
+            .home h1 {
+                font-size: 28px;
+            }
+
+            .section h2 {
+                font-size: 22px;
+            }
+
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) { /* Mobile screens */
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                margin-bottom: 20px;
+            }
+
+            .container {
+                margin-left: 0;
+            }
+
+            .sidebar .navbar-brand {
+                text-align: center;
+            }
+
+            .sidebar .nav-link {
+                text-align: center;
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .profile-img {
+                width: 100px;
+            }
+
+            .home h1 {
+                font-size: 24px;
+            }
+
+            .section h2 {
+                font-size: 20px;
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+
+            /* Adjust cards in sections */
+            .card {
+                margin-bottom: 20px;
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+
+            .text-start {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 640px) { /* Smaller mobile screens */
+            .sidebar {
+                width: 100%;
+                position: relative;
+            }
+
+            .home h1 {
+                font-size: 20px;
+            }
+
+            .section h2 {
+                font-size: 18px;
+            }
+
+            .card-body {
+                padding: 10px;
+            }
+
+            .resume-btn {
+                padding: 10px;
+            }
+        }
+
+        /* Additional small screen tweaks */
+        @media (max-width: 360px) {
+            .sidebar {
+                display: none;
+            }
+
+            .container {
+                margin-left: 0;
+            }
+
+            .dark-mode-toggle {
+                top: 5px;
+                right: 5px;
+            }
+
+            .home h1 {
+                font-size: 18px;
+            }
+
+            .section h2 {
+                font-size: 16px;
+            }
+
+            .card-body {
+                padding: 8px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
-        <a class="navbar-brand" href="#">Purushotham</a>
+        <a class="navbar-brand text-white text-center" href="#">Purushotham</a>
         <nav class="nav flex-column">
             <a class="nav-link" href="#home">Home</a>
             <a class="nav-link" href="#about">About</a>
@@ -29,34 +237,31 @@
     <!-- Dark Mode Toggle -->
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
 
-    <!-- Home Section -->
-    <section id="home" class="home">
-        <div class="container">
-            <img src="profile.jpg.png"" alt=" Profile Picture" class="profile-img">
-            <h1>Manchuri Purushotham</h1>
-            <p>Web Developer | Software Engineer | Cloud Enthusiast</p>
-            <a href="https://drive.google.com/file/d/1T1QpnUIlRBY5-ipKGO4J8Zj-gWF7RLHx/view?usp=sharing" download
-                class="btn btn-light resume-btn">📥 Download Resume</a>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="home">
+            <div class="text-center">
+                <img src="profile.jpg.png" alt="Profile Picture" class="profile-img">
+                <h1>Manchuri Purushotham</h1>
+                <p>Web Developer | Software Engineer | Cloud Enthusiast</p>
+                <a href="https://drive.google.com/file/d/1T1QpnUIlRBY5-ipKGO4J8Zj-gWF7RLHx/view?usp=sharing" download
+                    class="btn btn-light resume-btn">📥 Download Resume</a>
+            </div>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
+        <!-- About Section -->
+        <section id="about" class="section">
             <h2 class="text-start text-primary"><i class="fas fa-user"></i> About Me</h2>
             <div class="row">
                 <div class="col-md-6">
                     <div class="card about-card bg-light text-dark">
                         <div class="card-body">
-                            <h5 class="card-title text-secondary"><i class="fas fa-info-circle"></i> Personal
-                                Information</h5>
+                            <h5 class="card-title text-secondary"><i class="fas fa-info-circle"></i> Personal Information</h5>
                             <ul class="list-unstyled">
-                                <li><i class="fas fa-birthday-cake text-danger"></i> <strong>Birthday:</strong> 07 July
-                                    2005</li>
-                                <li><i class="fas fa-phone text-success"></i> <strong>Phone:</strong> +91-7993970556
-                                </li>
-                                <li><i class="fas fa-map-marker-alt text-primary"></i> <strong>City:</strong>
-                                    Peddamandyam</li>
+                                <li><i class="fas fa-birthday-cake text-danger"></i> <strong>Birthday:</strong> 07 July 2005</li>
+                                <li><i class="fas fa-phone text-success"></i> <strong>Phone:</strong> +91-7993970556</li>
+                                <li><i class="fas fa-map-marker-alt text-primary"></i> <strong>City:</strong> Peddamandyam</li>
                             </ul>
                         </div>
                     </div>
@@ -64,32 +269,26 @@
                 <div class="col-md-6">
                     <div class="card about-card bg-light text-dark">
                         <div class="card-body">
-<!--                             <h5 class="card-title text-secondary"><i class="fas fa-graduation-cap"></i> 
-                            </h5> -->
                             <ul class="list-unstyled">
                                 <li><i class="fas fa-user-clock text-warning"></i> <strong>Age:</strong> 20</li>
                                 <li><i class="fas fa-book text-info"></i> <strong>Degree:</strong> Undergraduate</li>
                                 <li><i class="fas fa-envelope text-danger"></i> <strong>Email:</strong> <a
-                                        href="mailto:manchuripurushotham07@gmail.com">manchuripurushotham07@gmail.com</a>
-                                </li>
+                                        href="mailto:manchuripurushotham07@gmail.com">manchuripurushotham07@gmail.com</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
+        <!-- Education Section -->
+        <section id="education" class="section">
             <h2 class="text-start text-primary"><i class="fas fa-graduation-cap"></i> Education</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card education-card bg-light text-dark">
                         <div class="card-body">
-                            <h5 class="card-title text-secondary"><i class="fas fa-university text-primary"></i> B.Tech,
-                                Computer Science & Engineering</h5>
+                            <h5 class="card-title text-secondary"><i class="fas fa-university text-primary"></i> B.Tech, Computer Science & Engineering</h5>
                             <p><strong>Duration:</strong> 2022 - 2026</p>
                             <p><strong>University:</strong> KL University</p>
                             <p><strong>CGPA:</strong> 8.91/10</p>
@@ -99,8 +298,7 @@
                 <div class="col-md-4">
                     <div class="card education-card bg-light text-dark">
                         <div class="card-body">
-                            <h5 class="card-title text-secondary"><i class="fas fa-school text-success"></i> Board of
-                                Intermediate Education (Inter)</h5>
+                            <h5 class="card-title text-secondary"><i class="fas fa-school text-success"></i> Board of Intermediate Education (Inter)</h5>
                             <p><strong>Year:</strong> 2022</p>
                             <p><strong>Board:</strong> BIEAP</p>
                             <p><strong>Marks:</strong> 867</p>
@@ -110,8 +308,7 @@
                 <div class="col-md-4">
                     <div class="card education-card bg-light text-dark">
                         <div class="card-body">
-                            <h5 class="card-title text-secondary"><i class="fas fa-book-open text-danger"></i> Board of
-                                Secondary Education (SSC)</h5>
+                            <h5 class="card-title text-secondary"><i class="fas fa-book-open text-danger"></i> Board of Secondary Education (SSC)</h5>
                             <p><strong>Year:</strong> 2020</p>
                             <p><strong>Board:</strong> BSEAP</p>
                             <p><strong>Percentage:</strong> 97%</p>
@@ -119,12 +316,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
+        <!-- Projects Section -->
+        <section id="projects" class="section">
             <h2 class="text-start text-primary"><i class="fas fa-laptop-code"></i> Projects</h2>
             <div class="row">
                 <div class="col-md-4">
@@ -132,8 +327,7 @@
                         <img src="https://www.skoolbeep.com/blog/wp-content/uploads/2020/12/BEST-LIBRARY-AUTOMATION-SOFTWARE-min.png"
                             class="card-img-top" alt="Library Management System">
                         <div class="card-body">
-                            <h5 class="card-title text-secondary"><i class="fas fa-book text-primary"></i> Library
-                                Management System</h5>
+                            <h5 class="card-title text-secondary"><i class="fas fa-book text-primary"></i> Library Management System</h5>
                             <p class="card-text">• Developed a web-based system using HTML, CSS, and JavaScript.</p>
                         </div>
                     </div>
@@ -143,28 +337,26 @@
                         <img src="https://www.skoolbeep.com/blog/wp-content/uploads/2020/12/BEST-LIBRARY-AUTOMATION-SOFTWARE-min.png"
                             class="card-img-top" alt="Food Order Management System">
                         <div class="card-body">
-                            <h5 class="card-title text-secondary"><i class="fas fa-utensils text-success"></i> Food
-                                Order Management System</h5>
-                            <p class="card-text">• Built using React, HTML, and CSS, reducing order processing time by
-                                15%.</p>
+                            <h5 class="card-title text-secondary"><i class="fas fa-utensils text-success"></i> Food Order Management System</h5>
+                            <p class="card-text">• Built using React, HTML, and CSS, reducing order processing time by 15%.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-    <div class="card project-card bg-light text-dark">
-        <img src="https://www.skoolbeep.com/blog/wp-content/uploads/2020/12/BEST-LIBRARY-AUTOMATION-SOFTWARE-min.png"
-            class="card-img-top" alt="Virtual Medical Consultation">
-        <div class="card-body">
-            <h5 class="card-title text-secondary"><i class="fas fa-user-md text-warning"></i> Virtual Medical Consultation</h5>
-            <p class="card-text">• Developed a telemedicine platform enabling remote patient consultations.</p>
-        </div>
-    </div>
-</div>
+                    <div class="card project-card bg-light text-dark">
+                        <img src="https://www.skoolbeep.com/blog/wp-content/uploads/2020/12/BEST-LIBRARY-AUTOMATION-SOFTWARE-min.png"
+                            class="card-img-top" alt="Virtual Medical Consultation">
+                        <div class="card-body">
+                            <h5 class="card-title text-secondary"><i class="fas fa-user-md text-warning"></i> Virtual Medical Consultation</h5>
+                            <p class="card-text">• Developed a telemedicine platform enabling remote patient consultations.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- Internships Section -->
+<!-- Internships Section -->
     <section id="internships" class="section">
         <div class="container">
             <h2 class="text-start text-primary"><i class="fas fa-briefcase"></i> Internships</h2>
@@ -331,6 +523,22 @@
 
     <!-- Footer -->
     <footer>
+        <p>© 2025 Manchuri Purushotham | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            let toggleButton = document.querySelector('.dark-mode-toggle');
+            toggleButton.innerHTML = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+        }
+    </script>
+
+</body>
+
+</html>
+    <!-- Footer -->
+    <footer class="text-center mt-5">
         <p>© 2025 Manchuri Purushotham | All Rights Reserved</p>
     </footer>
 
